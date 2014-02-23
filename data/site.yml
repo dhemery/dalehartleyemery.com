@@ -1,0 +1,13 @@
+title: Dale Hartley Emery
+subtitle: blah
+shortname: dalehartleyemery
+domain: dalehartleyemery.com
+timezone: Pacific Time (US & Canada)
+post_pattern: posts/:year-:month-:title
+copyright: 2014 Dale Hartley Emery
+author:
+  name: Dale Hartley Emery
+  email: dale@dalehartleyemery.com
+modules:
+- dogger
+- site
