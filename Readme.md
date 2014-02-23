@@ -1,6 +1,5 @@
-dalefiction
-===========
+dalehartleyemery.com
+====================
 
 Source code for
-Dale's fiction blog:
-_[dalefiction](http://dalefiction.dale.emery.name/)_.
+[Dale Hartley Emery's web site](http://dalehartleyemery.com/).
