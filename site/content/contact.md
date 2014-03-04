@@ -1,11 +1,10 @@
 ---
 title: Contact
-
 ---
 
-# Email
-
-**[dale@dalehartleyemery.com](mailto:dale@dalehartleyemery.com)**
+  - **Email: [dale@dalehartleyemery.com](mailto:dale@dalehartleyemery.com)**
+  - **[Twitter](http://twitter.com/dalewriting/)**
+  - **[Facebook](http://facebook.com/dalehartleyemery/)**
 
 # Publisher
 
