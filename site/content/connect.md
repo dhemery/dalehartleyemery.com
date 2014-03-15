@@ -3,12 +3,12 @@ title: Connect
 layout: article
 ---
 
-  - **[Join my mailing list](http://dalehartleyemery.us3.list-manage.com/subscribe?u=ebd8309bacca60752ecccd2b2&amp;id=cb6d5e276f)**
-  - **By email: [dale@dalehartleyemery.com](mailto:dale@dalehartleyemery.com)**
-  - **On [Bookface](http://facebook.com/dalehartleyemery/)**
-  - **On [Twitter](http://twitter.com/dalewriting/)**
-  - **On [Goodreads]()**
-  - **On [Amazon](https://www.goodreads.com/dalehartleyemery)**
+  - **Join [my mailing list](http://dalehartleyemery.us3.list-manage.com/subscribe?u=ebd8309bacca60752ecccd2b2&amp;id=cb6d5e276f)**.
+  - **Email to [dale@dalehartleyemery.com](mailto:dale@dalehartleyemery.com)**.
+  - **Connect on [Bookface](http://facebook.com/dalehartleyemery/)**.
+  - **Connect on [Twitter](http://twitter.com/dalewriting/)**.
+  - **Connect on [Goodreads](https://www.goodreads.com/dalehartleyemery)**.
+  - **Connect on [Amazon](https://amazon.com/author/dalehartleyemery)**.
 
 # Publisher
 
