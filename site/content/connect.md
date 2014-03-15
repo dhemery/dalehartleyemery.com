@@ -1,10 +1,13 @@
 ---
-title: Contact
+title: Connect
+layout: article
 ---
 
   - **Email: [dale@dalehartleyemery.com](mailto:dale@dalehartleyemery.com)**
   - **[Twitter](http://twitter.com/dalewriting/)**
-  - **[Facebook](http://facebook.com/dalehartleyemery/)**
+  - **[Bookface](http://facebook.com/dalehartleyemery/)**
+  - **[Goodreads]()**
+  - **[Dale Hartley Emery on Amazon](https://www.goodreads.com/dalehartleyemery)**
 
 # Publisher
 
