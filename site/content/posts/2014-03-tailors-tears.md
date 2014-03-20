@@ -1,13 +1,13 @@
 ---
-title: Refund (Kindle edition)
-date: 2014/03/14
+title: Tailor's Tears (Kindle edition)
+date: 2014/03/19
 tags:
-- Science Fiction
+- Contemporary Fantasy
 - Short Story
 
 ---
 
-[_Refund (Kindle Edition)_](http://www.amazon.com/dp/B00IZRZWGC/?tag=driscollbrookpress-20)
+[_Tailor's Tears (Kindle Edition)_](http://www.amazon.com/dp/B00J45LIZ8/?tag=driscollbrookpress-20)
 is now available on Amazon.com
 and other Amazon sites around the world.
 
