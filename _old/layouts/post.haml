@@ -1,3 +1,7 @@
+---
+layout: article
+---
+
 = wrap_layout :page do
   %article.post-page
     = partial "layouts/blog/post/header", locals: {title: current_page.data.title, date: current_article.date, url: current_article.url, tags: current_article.tags}

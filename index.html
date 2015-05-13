@@ -1,0 +1,13 @@
+---
+layout: page
+permalink: /
+---
+<section class='posts'>
+{% for post in site.posts limit:10 %}
+  <article class='post'>
+    {% include post/header.html post=post %}
+    {% include post/body.html body=post.content %}
+  </article>
+{% endfor %}
+</section>
+{% include post/disqus.html %}

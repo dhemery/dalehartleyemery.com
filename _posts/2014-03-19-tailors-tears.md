@@ -1,10 +1,8 @@
 ---
 title: Tailor's Tears (Kindle edition)
-date: 2014/03/19
 tags:
 - Contemporary Fantasy
 - Short Story
-
 ---
 
 [_Tailor's Tears (Kindle Edition)_](http://www.amazon.com/dp/B00J45LIZ8/?tag=driscollbrookpress-20)

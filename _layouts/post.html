@@ -1,0 +1,9 @@
+---
+layout: page
+---
+<article class='post'>
+  {% include post/header.html post=page %}
+  {% include post/body.html body=content %}
+  {% include post/comments.html post=page %}
+</article>
+{% include post/disqus.html %}
