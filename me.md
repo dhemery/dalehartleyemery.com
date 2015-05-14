@@ -1,6 +1,6 @@
 ---
-title: Author
-layout: article
+title: Me
+layout: about
 permalink: /:path/:basename/
 ---
 

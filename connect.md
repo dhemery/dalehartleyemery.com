@@ -1,6 +1,6 @@
 ---
 title: Connect
-layout: article
+layout: about
 permalink: /:path/:basename/
 ---
 

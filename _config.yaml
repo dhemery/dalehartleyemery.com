@@ -9,8 +9,8 @@ navbar:
     title: Books
     url: http://DriscollBrookPress.com/books/
   -
-    title: Author
-    url: /author/
+    title: Me
+    url: /me/
   -
     title: Connect
     url: /connect/

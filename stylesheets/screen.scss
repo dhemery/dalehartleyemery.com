@@ -1,18 +1,10 @@
 ---
 ---
 
-@import 'reset.css';
-
 $gutter-width: 2rem;
+
 $leading: 1.3;
 $header-leading: 1.1;
-
-$site-hue: 180;
-$dark: hsl($site-hue, 100%, 20%);
-$medium: hsl($site-hue, 20%, 60%);
-$light: hsl($site-hue, 10%, 92%);
-$lightest: hsl($site-hue, 5%, 98.5%);
-
 $text-font: Arial, Helvetica, sans-serif !default;
 $text-size: 100%;
 $banner-heading-size: 3rem;
@@ -21,20 +13,30 @@ $heading-1-size: 1.5rem;
 $heading-2-size: 1.2rem;
 $heading-3-size: 1rem;
 
+$site-hue: 180;
+$dark: hsl($site-hue, 100%, 20%);
+$medium: hsl($site-hue, 20%, 60%);
+$light: hsl($site-hue, 10%, 92%);
+$lightest: hsl($site-hue, 5%, 98.5%);
+
 html {
-    background-color: $medium;
-    font-family: $text-font;
-    font-size: $text-size;
-    color: black;
+  background-color: $medium;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    margin: auto $gutter-width;
-    background-color: $lightest;
-    line-height: $leading;
+  margin: auto $gutter-width;
+  background-color: $lightest;
+  line-height: $leading;
+  font-family: $text-font;
+  font-size: $text-size;
+  color: black;
 }
 
-body > header {
+.banner {
   background-color: $dark;
   text-align: center;
   h1 {
@@ -42,25 +44,6 @@ body > header {
     font-size: $banner-heading-size;
     color: $light;
   }
-}
-
-body > article, body > section {
-  padding: $gutter-width;
-}
-
-article + article {
-  margin-top: $gutter-width;
-  border-top: 1px solid $dark;
-  padding-top: $gutter-width;
-}
-
-nav ul {
-  display: inline;
-  list-style-type: none;
-  li { display: inline; }
-  li::after { content: ' |'; }
-  li:last-child::after { content: ''; }
-  a { font-weight: bold; }
 }
 
 nav, footer {
@@ -71,10 +54,41 @@ nav, footer {
   padding: .5em;
   text-align: center;
   color: $dark;
+  font-weight: bold;
 }
 
-h1, h2 {
+.posts, .post, .about {
+  padding: $gutter-width;
+}
+
+.posts .post {
+  header h1 { font-size: $heading-1-size; }
+  h1 { font-size: $heading-2-size; }
+  padding: 0;
+}
+
+.posts .post + .post {
+  margin-top: $gutter-width;
+  padding-top: $gutter-width;
+  border-top: 1px solid $dark;
+}
+
+nav ul {
+  display: inline;
+  list-style-type: none;
+  li { display: inline; }
+  li::after { content: ' |'; }
+  li:last-child::after { content: ''; }
+}
+
+h1, h2, h3, h4, p, blockquote, figure, ol, ul {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
   line-height: $header-leading;
+  font-size: inherit;
 }
 
 article, section {
@@ -82,7 +96,7 @@ article, section {
   a { color: $dark; }
 }
 
-article, section {
+.about, .posts, .post {
   h1 {
     font-size: $heading-1-size;
     margin-top: 1em;
@@ -91,18 +105,13 @@ article, section {
     font-size: $page-heading-size;
     margin-top: 0;
   }
-  article, section {
-    h1 { font-size: $heading-2-size; }
-    header h1 { font-size: $heading-1-size; }
-  }
 }
 
 a {
   text-decoration: none;
+  color: inherit;
   &:hover { text-decoration: underline; }
 }
-
-header a { color: inherit; }
 
 p { margin: 1em auto; }
 
@@ -116,12 +125,17 @@ em em {
 
 ol { list-style-type: decimal; }
 ul { list-style-type: disc; }
+li { display: block; }
 
 blockquote {
   border: 1px solid $medium;
   background-color: $light;
   p, em em { font-style: italic; }
-  em, em em em {
-    font-style: normal;
-  }
+  em, em em em { font-style: normal; }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
 }
