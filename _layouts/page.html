@@ -6,21 +6,18 @@
     <meta viewport='width=device-width' />
     <meta viewport='initial-scale=1' />
     <meta viewport='user-scalable=yes' />
-    <title>{{ site.data.banner.title }}</title>
+    <title>{{ site.data.domain.title }}</title>
     <link href='/favicon.ico' rel='icon' />
     <link href='/stylesheets/screen.css' media='screen,projection' rel='stylesheet' type='text/css' />
   </head>
   <body>
     <header class='banner'>
-      <h1><a href='/'>{{ site.data.banner.title }}</a></h1>
+      <h1><a href='/'>{{ site.data.domain.title }}</a></h1>
       {% include page/navigation.html %}
     </header>
     <aside>
       <section>
-        <header><h1>Search</h1></header>
-      </section>
-      <section>
-        <header><h1>{{ site.data.banner.title }}</h1></header>
+        <header><h1>{{ site.data.domain.title }}</h1></header>
         {% include page/navigation.html %}
       </section>
       <section>
