@@ -1,16 +1,16 @@
 ---
 title: Author
 layout: article
-
+permalink: /:path/:basename/
 ---
 
 I write fiction in a variety of genres,
 including fantasy, science fiction, and mystery.
 My short stories include
-[Carrion Road](http://driscollbrookpress.com/title/carrion-road/),
-[Yantriel's Privy](http://driscollbrookpress.com/title/yantriels-privy/),
+*[Carrion Road](http://driscollbrookpress.com/title/carrion-road/),*
+*[Yantriel's Privy](http://driscollbrookpress.com/title/yantriels-privy/),*
 and
-[The Last Whiskey Bacon Cheddar Burger at Saint Florian's Abbey](http://driscollbrookpress.com/title/saint-florians-abbey/).
+*[The Last Whiskey Bacon Cheddar Burger at Saint Florian's Abbey](http://driscollbrookpress.com/title/saint-florians-abbey/).*
 
 I have worked as a failed shoemaker,
 reluctant dairy farmer,

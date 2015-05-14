@@ -1,6 +1,7 @@
 ---
 title: Connect
 layout: article
+permalink: /:path/:basename/
 ---
 
   - **Join [my mailing list](http://eepurl.com/ONyOj)**.

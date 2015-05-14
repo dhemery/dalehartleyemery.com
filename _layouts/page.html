@@ -8,16 +8,24 @@
     <meta viewport='user-scalable=yes' />
     <title>{{ page.title }}</title>
     <link href='/favicon.ico' rel='icon' />
-    <link href-'/stylesheets/screen.css' media='screen,projection' rel='stylesheet' type='text/css' />
+    <link href='/stylesheets/screen.css' media='screen,projection' rel='stylesheet' type='text/css' />
   </head>
   <body>
     <header>
-      <h1><a href='/'>{{ site.title }}</a></h1>
+      <h1>
+        <a href='/'>
+          {{ site.title }}
+        </a>
+      </h1>
       <nav>
         <ul>
-        {% for link in site.navbar %}
-        <li><a href='{{ link.url }}'>{{ link.title }}</a></li>
-        {% endfor %}
+          {% for link in site.navbar %}
+          <li>
+            <a href='{{ link.url }}'>
+              {{ link.title }}
+            </a>
+          </li>
+          {% endfor %}
         </ul>
       </nav>
     </header>

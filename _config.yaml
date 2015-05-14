@@ -22,13 +22,6 @@ defaults:
   -
     scope:
       path: ''
-      type: 'pages'
-    values:
-      layout: 'article'
-      permalink: /:path/:basename/
-  -
-    scope:
-      path: ''
       type: 'posts'
     values:
       layout: 'post'
