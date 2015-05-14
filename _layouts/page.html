@@ -6,16 +6,16 @@
     <meta viewport='width=device-width' />
     <meta viewport='initial-scale=1' />
     <meta viewport='user-scalable=yes' />
-    <title>{{ page.title }}</title>
+    <title>{{ site.data.banner.title }}</title>
     <link href='/favicon.ico' rel='icon' />
     <link href='/stylesheets/screen.css' media='screen,projection' rel='stylesheet' type='text/css' />
   </head>
   <body>
     <header class='banner'>
-      <h1><a href='/'>{{ site.title }}</a></h1>
+      <h1><a href='/'>{{ site.data.banner.title }}</a></h1>
       <nav>
         <ul>
-          {% for link in site.navbar %}
+          {% for link in site.data.navbar %}
           <li><a href='{{ link.url }}'>{{ link.title }}</a></li>
           {% endfor %}
         </ul>
@@ -23,7 +23,19 @@
     </header>
     {{ content }}
     <footer>
-      <p>{{ site.copyright }}</p>
+      {% capture copyright_date %}
+      {% if page.copyright.date %}{{ page.copyright.date }}
+      {% elsif page.date %}{{ page.date | date: '%Y' }}
+      {% else %}
+        {% if site.data.copyright.start_date %}{{ site.data.copyright.start_date }}&ndash;{% endif %}{{ site.time | date: '%Y' }}
+      {% endif %}
+      {% endcapture %}
+      {% capture copyright_owner %}
+      {% if page.copyright.owner %}{{ page.copyright.owner }}
+      {% else %}{{ site.data.copyright.owner }}
+      {% endif %}
+      {% endcapture %}
+      <p>&copy; {{ copyright_date }} {{ copyright_owner }}</p>
     </footer>
   </body>
 </html>

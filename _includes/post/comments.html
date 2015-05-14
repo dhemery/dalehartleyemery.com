@@ -1,7 +1,7 @@
 <section class='comments' id='disqus_thread'>
   <script>
-    var disqus_shortname = '{{ site.disqus.id }}';
-    var disqus_identifier = 'http://{{ site.disqus.domain }}#{{ include.post.url }}';
+    var disqus_shortname = '{{ site.data.disqus.shortname }}';
+    var disqus_identifier = 'http://{{ site.data.disqus.domain }}#{{ include.post.url }}';
     (function() {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
