@@ -1,0 +1,34 @@
+---
+---
+<feed xmlns='http://www.w3.org/2005/Atom'>
+  <title type='html'>{{ site.data.banner.title }}</title>
+  <link href='{{ site.data.domain.url }}{{ page.url }}' rel: 'self' />
+  <link href='{{ site.data.domain.url }}' rel: 'alternate' />
+  <id>{{ site.data.domain.url }}</id>
+  <updated>{{ site.posts.first.date }}</updated>
+  <rights type='html'>
+    &copy;
+    {% if site.data.copyright.start_date %}{{ site.data.copyright.start_date }}&ndash;{% endif %}{{ site.time | date: '%Y' }}
+    {{ site.data.copyright.owner }}
+  </rights>
+  <author>
+    <name>{{ site.data.copyright.owner }}</name>
+    <email>{{ site.data.author.email }}</name>
+  </author>
+  xml.author do
+    xml.name data.site.author.name
+    xml.email data.site.author.email
+  end
+  blog.articles[0..10].each do |post|
+    xml.entry do
+      xml.title post.title, type: 'html'
+      xml.id URI.join(site_url, post.url)
+      xml.link href: post.url, rel: 'alternate'
+      post.tags.each do |tag|
+        xml.category term: tag
+      end
+      xml.updated post.date.strftime(date_format)
+      xml.content post.body, type: 'html'
+    end
+  end
+</feed>

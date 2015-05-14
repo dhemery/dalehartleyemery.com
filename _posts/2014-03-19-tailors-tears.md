@@ -1,7 +1,8 @@
 ---
 title: Tailor's Tears (Kindle edition)
 tags:
-- Contemporary Fantasy
+- Fantasy
+- Contemporary
 - Short Story
 ---
 

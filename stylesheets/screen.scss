@@ -19,6 +19,12 @@ $medium: hsl($site-hue, 20%, 60%);
 $light: hsl($site-hue, 10%, 92%);
 $lightest: hsl($site-hue, 5%, 98.5%);
 
+aside {
+  float: right;
+  width: 20%;
+  padding: 5%;
+}
+
 html {
   background-color: $medium;
   -ms-text-size-adjust: 100%;
@@ -57,13 +63,26 @@ nav, footer {
   font-weight: bold;
 }
 
+footer { clear: both; }
+
+body {
+  & > article, & > section {
+    width: 70%;
+    margin: 5% 0;
+  }
+}
 .posts, .post, .about {
   padding: $gutter-width;
+}
+
+.posts {
+  padding-top: 0;
 }
 
 .posts .post {
   header h1 { font-size: $heading-1-size; }
   h1 { font-size: $heading-2-size; }
+  &:first-child { padding-top: 0; }
   padding: 0;
 }
 
