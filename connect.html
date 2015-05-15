@@ -1,0 +1,41 @@
+---
+title: Connect
+layout: about
+permalink: /:path/:basename/
+links:
+-
+  name: Email
+  url: mailto:dale@dalehartleyemery.com
+-
+  name: Facebook
+  url: http://facebook.com/dalehartleyemery/
+
+-
+  name: Twitter
+  url: http://twitter.com/dalewriting/
+
+-
+  name: Goodreads
+  url: https://www.goodreads.com/dalehartleyemery
+
+-
+  name: Amazon
+  url: https://amazon.com/author/dalehartleyemery
+
+---
+<section>
+  <ul>
+    {% for link in page.links %}
+      <li><a href='{{ link.url }}'>{{ link.name }}</a></li>
+    {% endfor %}
+  </ul>
+</section>
+<section>
+  <h1>Publisher</h1>
+  <p>
+    <a href='http://DriscollBrookPress.com'>Driscoll Brook Press</a>
+    <br />
+    PO Box 161924<br />
+    Sacramento CA 95816 USA
+  </p>
+</section>

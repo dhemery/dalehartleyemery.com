@@ -1,37 +1,40 @@
-$body-width: 960px;
-$column-margin: 32px / $body-width * 100%;
-$single-column: 100% / 2.618 - 2 * $column-margin;
-$double-column: 100% * 1.618 / 2.618 - 2 * $column-margin;
+$body-width: 60rem;
+$main-width: 40rem;
+$main-width-percent: $main-width / $body-width * 100%;
+$sidebar-width: $body-width - $main-width;
+$sidebar-width-percent: $sidebar-width / $body-width * 100%;
+
+$padding: 2rem;
+$padding-percent: $padding / $main-width * 100%;
+
 body {
   max-width: $body-width;
   margin: 0 auto;
 }
 
-#content {
-  width: $double-column;
-  margin-left: $column-margin;
+#main {
   float: left;
-  margin-bottom: 1rem;
+  width: $main-width-percent - 2 * $padding-percent;
+  margin: $padding-percent;
 }
 
 #sidebar {
-  width: $single-column;
-  margin-right: $column-margin;
   float: right;
+  width: $sidebar-width-percent - $padding-percent;
+  margin: $padding $padding-percent $padding 0;
 }
-
-#sidebar section, .post { padding: 1rem 0; }
-
-#banner { margin-bottom: 1rem; }
 
 #footer { clear: both; }
 
+article, section {
+
+}
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 h1, h2, h3, h4, p, blockquote, figure, ol, ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }

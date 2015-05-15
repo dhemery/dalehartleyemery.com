@@ -1,21 +1,13 @@
 <header>
-  <h1>
-    <a href='{{ include.post.url }}' class='site-link'>
-      {{ include.post.title }}
-    </a>
-  </h1>
-  <section class='post-meta'>
-    <time datetime='{{ include.post.date }}'>
-      {{ include.post.date }}
-    </time>
-    |
-    <a class='site-link' href='{{ include.post.url }}#disqus_thread'></a>
-    |
-    Tags:
-    {% for tag in include.post.tags %}
-    <a href='/{{ tag | slugify }}/'>
-      {{ tag }}
-    </a>
-    {% endfor %}
-  </section>
+  <h1 class='title'><a href='{{ include.post.url }}' class='site-link'>{{ include.post.title }}</a></h1>
+  <time datetime='{{ include.post.date }}'>
+    {{ include.post.date | date: '%B %-d, %Y' }}
+  </time>
+  |
+  <a href='{{ include.post.url }}#disqus_thread'></a>
+  |
+  Tags:
+  <ul class='inline tags'>
+    {% for tag in include.post.tags %}<li><a href='/{{ tag | slugify }}/'>{{ tag }}</a></li>{% endfor %}
+  </ul>
 </header>

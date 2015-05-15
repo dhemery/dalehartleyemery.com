@@ -1,17 +1,15 @@
 ---
 ---
-
 @import 'layout';
 
-$leading: 1.618;
+$leading: 1.5;
 $header-leading: 1.1;
 $text-font: Arial, Helvetica, sans-serif !default;
 $text-size: 100%;
-$banner-heading-size: 3rem;
-$page-heading-size: 2.25rem;
+$site-title-size: 3rem;
+$title-size: 2rem;
 $heading-1-size: 1.5rem;
-$heading-2-size: 1.2rem;
-$heading-3-size: 1rem;
+$heading-2-size: 1.17rem;
 
 $site-hue: 180;
 $dark: hsl($site-hue, 100%, 20%);
@@ -35,65 +33,21 @@ body {
   color: black;
 }
 
-#banner, #footer {
-  text-align: center;
-}
-
-#banner {
-  h1 {
-    background-color: $dark;
-    font-size: $banner-heading-size;
-    color: $light;
-  }
-}
-
-#navbar ul {
-  display: inline;
-  list-style-type: none;
-  li { display: inline; }
-  li::after { content: ' |'; }
-  li:last-child::after { content: ''; }
-}
-
-#footer, #navbar {
-  border: 1px solid $medium;
-  border-left: 0;
-  border-right: 0;
-  background-color: $light;
-  font-weight: bold;
-  color: $dark;
-}
-
-.post {
-  header h1 { font-size: $heading-1-size; }
-  h1 { font-size: $heading-2-size; }
-  .body p:first-child {
-    font-size: 1.2rem;
-  }
-  border-top: 1px solid $dark;
-}
-
-#sidebar section { border-top: 1px solid $dark; }
-
-h1, h2, h3, h4 {
-  line-height: $header-leading;
+h1, h2 {
   font-size: inherit;
+  line-height: $header-leading;
 }
 
-#content {
-  header h1 { font-size: $page-heading-size; }
-  h1 { font-size: $heading-1-size; }
-  h1, a { color: $dark; }
-}
+h1 { font-size: $heading-1-size; }
+h2 { font-size: $heading-2-size; }
 
 a {
   text-decoration: none;
-  color: inherit;
   &:hover { text-decoration: underline; }
+  color: inherit;
 }
 
-
-p { margin: 1em auto; }
+p, ul { margin: 1em auto; }
 
 em, em em em { font-style: italic; }
 em em { font-style: normal; }
@@ -110,3 +64,45 @@ blockquote {
 }
 
 img { border: 0; }
+
+.site-title {
+  background-color: $dark;
+  font-size: $site-title-size;
+  color: $light;
+}
+
+.centered { text-align: center; }
+
+.chrome {
+  border: 1px solid $medium;
+  border-left: 0;
+  border-right: 0;
+  background-color: $light;
+  font-weight: bold;
+  color: $dark;
+}
+
+.colorized {
+  h1 { color: $dark; }
+  a { color: $dark; }
+}
+
+.inline {
+  display: inline;
+  list-style-type: none;
+  li { display: inline; }
+}
+
+.navlinks li + li::before { content: ' | '; }
+
+.post .body p:first-child { font-size: 1.2rem; }
+
+.post + .post {
+  border-top: 1px solid $dark;
+}
+
+.site-title { font-size: $site-title-size; }
+
+.tags li + li::before { content: ', '; }
+
+.title { font-size: $title-size; }
