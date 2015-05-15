@@ -11,14 +11,18 @@
     <link href='/stylesheets/screen.css' media='screen,projection' rel='stylesheet' type='text/css' />
   </head>
   <body>
-    <header class='banner'>
+    <header id='banner'>
       <h1><a href='/'>{{ site.data.domain.title }}</a></h1>
-      {% include page/navigation.html %}
+      <nav id='navbar'>
+        {% include page/navigation.html %}
+      </nav>
     </header>
-    <aside>
+    <aside id='sidebar'>
       <section>
         <header><h1>{{ site.data.domain.title }}</h1></header>
-        {% include page/navigation.html %}
+        <nav>
+          {% include page/navigation.html %}
+        </nav>
       </section>
       <section>
         <header><h1>Books</h1></header>
@@ -48,14 +52,14 @@
       </section>
     </aside>
     {{ content }}
-    <footer>
+    <footer id='footer'>
       {% capture copyright_date %}
       {% if page.copyright.date %}{{ page.copyright.date }}
       {% elsif page.date %}{{ page.date | date: '%Y' }}
       {% else %}{{ site.data.domain.start_date }}&ndash;{{ site.time | date: '%Y' }}
       {% endif %}
       {% endcapture %}
-      <p>&copy; {{ copyright_date }} {{ site.data.domain.author }}</p>
+      <p>&copy; {{ copyright_date }} {{ site.data.domain.author.name }}</p>
     </footer>
   </body>
 </html>

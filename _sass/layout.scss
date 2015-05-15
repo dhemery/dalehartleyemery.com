@@ -1,10 +1,30 @@
-aside {
+$body-width: 960px;
+$column-margin: 32px / $body-width * 100%;
+$single-column: 100% / 2.618 - 2 * $column-margin;
+$double-column: 100% * 1.618 / 2.618 - 2 * $column-margin;
+body {
+  max-width: $body-width;
+  margin: 0 auto;
+}
+
+#content {
+  width: $double-column;
+  margin-left: $column-margin;
+  float: left;
+  margin-bottom: 1rem;
+}
+
+#sidebar {
+  width: $single-column;
+  margin-right: $column-margin;
   float: right;
 }
 
-footer {
-  clear: both;
-}
+#sidebar section, .post { padding: 1rem 0; }
+
+#banner { margin-bottom: 1rem; }
+
+#footer { clear: both; }
 
 img {
     max-width: 100%;
