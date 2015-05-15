@@ -1,6 +1,6 @@
 <aside id='sidebar' role='navigation' class='colorized'>
   <section>
-    <h1>Tags</h1>
+    <header><h1>Tags</h1></header>
     <ul>
       {% capture unsorted %}{% for tag in site.tags %}{{ tag[0] }}@{% endfor %}{% endcapture %}
       {% assign sortedtags = unsorted | split:'@' | sort %}
@@ -10,7 +10,7 @@
     </ul>
   </section>
   <section>
-    <h1>Recent Posts</h1>
+    <header><h1>Recent Posts</h1></header>
     <ul>
       {% for post in site.posts limit:10 %}
         <li>
@@ -21,15 +21,12 @@
       {% endfor %}
     </ul>
   </section>
-  <section id='books'>
-    <h1>Books</h1>
-    <ul>
+  <section class='books'>
+    <header><h1>Books</h1></header>
       {% for slug in site.data.books %}
-        <li>
-          <a href='http://DriscollBrookPress.com/title/{{ slug }}/'>
-            <img src='http://DriscollBrookPress.com/images/{{ slug }}-cover-web.jpg' />
-          </a>
-        </li>
+        <a href='http://DriscollBrookPress.com/title/{{ slug }}/'>
+          <img src='http://DriscollBrookPress.com/images/{{ slug }}-cover-web.jpg' />
+        </a>
       {% endfor%}
     </ul>
   </section>

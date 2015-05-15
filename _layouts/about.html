@@ -2,6 +2,12 @@
 layout: page
 ---
 <article class='about'>
-  <h1 class='title'><a href='{{ page.url }}'>{{ page.title }}</a></h1>
+  <header>
+    <h1 class='title'>
+      <a href='{{ page.url }}'>
+        {{ page.title }}
+      </a>
+    </h1>
+  </header>
   {{ content }}
 </article>

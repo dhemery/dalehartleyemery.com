@@ -15,7 +15,7 @@ body {
 #main {
   float: left;
   width: $main-width-percent - 2 * $padding-percent;
-  margin: $padding-percent;
+  margin: $padding $padding-percent;
 }
 
 #sidebar {
@@ -26,9 +26,6 @@ body {
 
 #footer { clear: both; }
 
-article, section {
-
-}
 img {
   max-width: 100%;
   height: auto;
@@ -37,4 +34,10 @@ img {
 h1, h2, h3, h4, p, blockquote, figure, ol, ul {
   margin: 0;
   padding: 0;
+}
+
+.post + .post { margin-top: 4rem; }
+
+#sidebar section + section {
+  margin-top: 2rem;
 }

@@ -1,5 +1,5 @@
 ---
-title: Me
+title: About Me
 layout: about
 permalink: /:path/:basename/
 ---
