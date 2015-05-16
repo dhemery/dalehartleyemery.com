@@ -1,20 +1,23 @@
 <aside id='sidebar' role='navigation' class='colorized'>
-  <section>
-    <header><h1>Tags</h1></header>
-    <ul>
-      {% assign tag_pages = site.pages | where: 'tag_page', true | sort: 'title' %}
-      {% for tag_page in tag_pages %}
-        <li>
-          <a href='{{ tag_page.url }}'>
-            {{ tag_page.title }}
-          </a>
-        </li>
-      {% endfor%}
-    </ul>
+  <section class='books'>
+    <header class='boxed header'>
+      <h1 class='title'>
+        Books
+      </h1>
+    </header>
+    {% for slug in site.data.books %}
+      <a href='http://DriscollBrookPress.com/title/{{ slug }}/'>
+        <img src='http://DriscollBrookPress.com/images/{{ slug }}-cover-web.jpg' />
+      </a>
+    {% endfor%}
   </section>
   <section>
-    <header><h1>Recent Posts</h1></header>
-    <ul>
+    <header class='boxed header'>
+      <h1 class='title'>
+        Recent Posts
+      </h1>
+    </header>
+    <ul class='bullets'>
       {% for post in site.posts limit:10 %}
         <li>
           <a href='{{ post.url }}'>
@@ -24,12 +27,20 @@
       {% endfor %}
     </ul>
   </section>
-  <section class='books'>
-    <header><h1>Books</h1></header>
-      {% for slug in site.data.books %}
-        <a href='http://DriscollBrookPress.com/title/{{ slug }}/'>
-          <img src='http://DriscollBrookPress.com/images/{{ slug }}-cover-web.jpg' />
-        </a>
+  <section>
+    <header class='boxed header'>
+      <h1 class='title'>
+        Tags
+      </h1>
+    </header>
+    <ul class='bullets'>
+      {% assign tag_pages = site.pages | where: 'tag_page', true | sort: 'title' %}
+      {% for tag_page in tag_pages %}
+        <li>
+          <a href='{{ tag_page.url }}'>
+            {{ tag_page.title }}
+          </a>
+        </li>
       {% endfor%}
     </ul>
   </section>

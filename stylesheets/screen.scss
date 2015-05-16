@@ -6,7 +6,7 @@ $leading: 1.5;
 $header-leading: 1.1;
 $text-font: Arial, Helvetica, sans-serif !default;
 $text-size: 100%;
-$site-title-size: 3rem;
+$banner-title-size: 3rem;
 $title-size: 2rem;
 $heading-1-size: 1.5rem;
 $heading-2-size: 1.17rem;
@@ -33,13 +33,6 @@ body {
   color: black;
 }
 
-header {
-  padding: .5rem 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid $medium;
-  background-color: $light;
-}
-
 h1, h2 {
   font-size: inherit;
   line-height: $header-leading;
@@ -54,16 +47,11 @@ a {
   color: inherit;
 }
 
-#main {
-  p, ul, ol { margin: 1em auto; }
-}
-
 em, em em em { font-style: italic; }
 em em { font-style: normal; }
 
-ol { list-style-type: decimal; }
-ul { list-style-type: disc; }
-li { margin-left: 2rem; }
+ol, ul { list-style: none; }
+li { margin: 0; }
 
 blockquote {
   border: 1px solid $medium;
@@ -74,25 +62,64 @@ blockquote {
 
 img { border: 0; }
 
-#sidebar h1 { font-size: $heading-2-size; }
+[role='banner'] {
+  padding: 2rem;
+  background-color: $dark;
+  color: $light;
+}
 
-.books a {
-  width: 48%;
-  margin-bottom: .5rem;
-  &:nth-child(odd) { float: right; }
-  &:nth-child(even) { float: left;}
+[role='main'] {
+  p, ul, ol { margin: 1em auto; }
+  ol { list-style-type: decimal; }
+  ul { list-style-type: disc; }
+  li { margin-left: 2rem; }
+}
+
+#sidebar {
+  h1 { font-size: $heading-2-size; }
+}
+
+.banner {
+  font-size: $banner-title-size;
+  font-weight: normal;
+}
+
+.books {
+  overflow: hidden;
+  a {
+    width: 48%;
+    margin-bottom: .5rem;
+    &:nth-child(odd) { float: left; }
+    &:nth-child(even) { float: right; }
+  }
+}
+
+.boxed, .chrome {
+  border-color: $medium;
+  border-width: 1px;
+  background-color: $light;
+  padding: .5rem 1rem;
+}
+
+.boxed {
+  border-style: solid;
+  background-color: $light;
+  padding: .5rem 1rem;
+  h1, li { color: $dark; }
+}
+
+.bullets {
+  list-style: disc;
+  li { margin-left: 1em; }
 }
 
 .centered { text-align: center; }
 
 .chrome {
-  border: 1px solid $medium;
-  border-left: 0;
-  border-right: 0;
-  background-color: $light;
+  border-top-style: solid;
+  border-bottom-style: solid;
   font-weight: bold;
   color: $dark;
-  padding: .5rem;
 }
 
 .colorized {
@@ -100,10 +127,13 @@ img { border: 0; }
   a { color: $dark; }
 }
 
+.header {
+  margin: 2rem 0 1rem;
+}
+
 .inline {
   margin-left: 0;
   display: inline;
-  list-style-type: none;
   li {
     display: inline;
     margin-left: 0;
@@ -114,13 +144,8 @@ img { border: 0; }
 
 .post .body p:first-child { font-size: 1.2rem; }
 
-.site-title {
-  padding: 2rem;
-  background-color: $dark;
-  font-size: $site-title-size;
-  color: $light;
-}
-
 .tags li + li::before { content: ', '; }
 
-.title { font-size: $title-size; }
+.title {
+  font-variant: small-caps;
+}

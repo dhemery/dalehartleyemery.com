@@ -12,32 +12,32 @@ body {
   margin: 0 auto;
 }
 
-#main {
-  float: left;
-  width: $main-width-percent - 2 * $padding-percent;
-  margin: $padding $padding-percent;
+h1, h2, h3, h4, p, blockquote, figure, ol, ul {
+  margin: 0;
+  padding: 0;
 }
-
-#sidebar {
-  float: right;
-  width: $sidebar-width-percent - $padding-percent;
-  margin: $padding $padding-percent $padding 0;
-}
-
-#footer { clear: both; }
 
 img {
   max-width: 100%;
   height: auto;
 }
 
-h1, h2, h3, h4, p, blockquote, figure, ol, ul {
-  margin: 0;
-  padding: 0;
+#main {
+  float: left;
+  width: $main-width-percent - 2 * $padding-percent;
+  margin: 0 $padding-percent;
 }
 
-.post + .post { margin-top: 4rem; }
+#sidebar {
+  float: right;
+  width: $sidebar-width-percent - $padding-percent;
+  margin: 0 $padding-percent 0 0;
+}
+
+#footer { clear: both; }
 
 #sidebar section + section {
   margin-top: 2rem;
 }
+
+.post + .post { margin-top: 4rem; }
