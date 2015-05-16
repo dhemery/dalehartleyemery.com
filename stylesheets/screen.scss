@@ -54,16 +54,16 @@ a {
   color: inherit;
 }
 
-p { margin: 1rem auto; }
+#main {
+  p, ul, ol { margin: 1em auto; }
+}
 
 em, em em em { font-style: italic; }
 em em { font-style: normal; }
 
-ul, ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+ol { list-style-type: decimal; }
+ul { list-style-type: disc; }
+li { margin-left: 2rem; }
 
 blockquote {
   border: 1px solid $medium;
@@ -74,10 +74,7 @@ blockquote {
 
 img { border: 0; }
 
-#sidebar {
-  h1 { font-size: $heading-2-size; }
-  li { margin: .5rem 0; }
-}
+#sidebar h1 { font-size: $heading-2-size; }
 
 .books a {
   width: 48%;
@@ -104,9 +101,13 @@ img { border: 0; }
 }
 
 .inline {
+  margin-left: 0;
   display: inline;
   list-style-type: none;
-  li { display: inline; }
+  li {
+    display: inline;
+    margin-left: 0;
+  }
 }
 
 .navlinks li + li::before { content: ' | '; }
