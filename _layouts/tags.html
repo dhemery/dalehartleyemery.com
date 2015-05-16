@@ -1,0 +1,17 @@
+---
+layout: page
+---
+
+<header>
+  <h1 class='title'>
+    <a href='{{ page.url }}'>
+      {{ page.title }}
+    </a>
+  </h1>
+</header>
+<ol>
+  {% for post in page.posts %}
+    {% include post/header.html post=post %}
+  {% endfor %}
+</ol>
+{% include post/disqus.html %}

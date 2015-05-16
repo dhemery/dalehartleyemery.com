@@ -8,3 +8,4 @@ defaults:
     values:
       layout: 'post'
 force_polling: true
+host: 0.0.0.0

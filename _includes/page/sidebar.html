@@ -2,10 +2,9 @@
   <section>
     <header><h1>Tags</h1></header>
     <ul>
-      {% capture unsorted %}{% for tag in site.tags %}{{ tag[0] }}@{% endfor %}{% endcapture %}
-      {% assign sortedtags = unsorted | split:'@' | sort %}
-      {% for tag in sortedtags %}
-        <li><a href='/tags/{{ tag | slugify }}/'>{{ tag }}</a></li>
+      {% assign tag_pages = site.pages | where: 'tag_page', true | sort: 'title' %}
+      {% for tag_page in tag_pages %}
+        <li><a href='{{ tag_page.url }}'>{{ tag_page.title }}</a></li>
       {% endfor%}
     </ul>
   </section>
