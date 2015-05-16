@@ -8,11 +8,11 @@ module Jekyll
       @name = Utils::slugify(tag)
 
       self.process(@name)
-      self.read_yaml(File.join(@base, '_layouts'), 'tags.html')
+      self.read_yaml(File.join(@base, '_layouts'), 'tag.html')
       self.data['title'] = tag
       self.data['posts'] = posts
-      # self.data['permalink'] = '/:path/:basename/'
       self.data['tag_page'] = true
+      self.data['permalink'] = '/:path/:basename/'
     end
   end
 
