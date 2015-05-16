@@ -4,7 +4,11 @@
     <ul>
       {% assign tag_pages = site.pages | where: 'tag_page', true | sort: 'title' %}
       {% for tag_page in tag_pages %}
-        <li><a href='{{ tag_page.url }}'>{{ tag_page.title }}</a></li>
+        <li>
+          <a href='{{ tag_page.url }}'>
+            {{ tag_page.title }}
+          </a>
+        </li>
       {% endfor%}
     </ul>
   </section>

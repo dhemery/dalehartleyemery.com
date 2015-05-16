@@ -54,16 +54,16 @@ a {
   color: inherit;
 }
 
-#main {
-  p, ul { margin: 1em auto; }
-}
+p { margin: 1rem auto; }
 
 em, em em em { font-style: italic; }
 em em { font-style: normal; }
 
-ol { list-style-type: decimal; }
-ul { list-style-type: disc; }
-li { display: block; }
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 blockquote {
   border: 1px solid $medium;
@@ -74,7 +74,10 @@ blockquote {
 
 img { border: 0; }
 
-#sidebar h1 { font-size: $heading-2-size; }
+#sidebar {
+  h1 { font-size: $heading-2-size; }
+  li { margin: .5rem 0; }
+}
 
 .books a {
   width: 48%;
