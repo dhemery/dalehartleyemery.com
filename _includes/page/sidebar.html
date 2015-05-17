@@ -1,10 +1,12 @@
-<aside id='sidebar' role='navigation' class='colorized'>
-  <section class='books'>
-    <header class='boxed header'>
-      <h1 class='title'>
-        Books
-      </h1>
-    </header>
+<aside id='sidebar' role='navigation'>
+  <section>
+    <h1 class='boxed header title'>{{ site.data.domain.title }}</h1>
+    <ul class='bullets'>
+      {% for link in site.data.navigation %}<li><a href='{{ link.url }}'>{{ link.title }}</a></li>{% endfor %}
+    </ul>
+</section>
+  <section class='book-links'>
+    <h1 class='boxed header title'>Recent Books</h1>
     {% for slug in site.data.books %}
       <a href='http://DriscollBrookPress.com/title/{{ slug }}/'>
         <img src='http://DriscollBrookPress.com/images/{{ slug }}-cover-web.jpg' />
@@ -12,35 +14,19 @@
     {% endfor%}
   </section>
   <section>
-    <header class='boxed header'>
-      <h1 class='title'>
-        Recent Posts
-      </h1>
-    </header>
+    <h1 class='boxed header title'>Recent Posts</h1>
     <ul class='bullets'>
       {% for post in site.posts limit:10 %}
-        <li>
-          <a href='{{ post.url }}'>
-            {{ post.title }}
-          </a>
-        </li>
+        <li><a href='{{ post.url }}'>{{ post.title }}</a></li>
       {% endfor %}
     </ul>
   </section>
   <section>
-    <header class='boxed header'>
-      <h1 class='title'>
-        Tags
-      </h1>
-    </header>
+    <h1 class='boxed header title'>Tags</h1>
     <ul class='bullets'>
       {% assign tag_pages = site.pages | where: 'tag_page', true | sort: 'title' %}
       {% for tag_page in tag_pages %}
-        <li>
-          <a href='{{ tag_page.url }}'>
-            {{ tag_page.title }}
-          </a>
-        </li>
+        <li><a href='{{ tag_page.url }}'>{{ tag_page.title }}</a></li>
       {% endfor%}
     </ul>
   </section>

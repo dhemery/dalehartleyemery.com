@@ -48,7 +48,6 @@ body {
   line-height: $leading;
   font-family: $text-font;
   font-size: $text-size;
-  color: black;
 }
 
 em, em em em { font-style: italic; }
@@ -73,28 +72,20 @@ ol, ul { list-style: none; }
 li { margin: 0; }
 
 
-[role='banner'] {
-  padding: 2em;
-  background-color: $dark;
-  color: $light;
-}
-
-[role='main'] {
+main {
   ol { list-style-type: decimal; }
   ul { list-style-type: disc; }
-  li { margin-left: 2em; }
-}
-
-#sidebar {
-  h1 { font-size: $heading-2-size; }
 }
 
 .banner {
+  background-color: $dark;
+  padding: .5em;
   font-size: $banner-title-size;
   font-weight: normal;
+  color: $light;
 }
 
-.books {
+.book-links {
   overflow: hidden;
   a {
     width: 48%;
@@ -108,20 +99,15 @@ li { margin: 0; }
   border-color: $medium;
   border-width: 1px;
   background-color: $light;
-  padding: .5em 1em;
 }
 
 .boxed {
   border-style: solid;
   background-color: $light;
   padding: .5em 1em;
-  h1, li { color: $dark; }
 }
 
-.bullets {
-  list-style: disc;
-  li { margin-left: 1em; }
-}
+.bullets { list-style: disc; }
 
 .centered { text-align: center; }
 
@@ -132,13 +118,12 @@ li { margin: 0; }
   color: $dark;
 }
 
-.colorized {
-  h1 { color: $dark; }
-  a { color: $dark; }
+.about, .post, #sidebar, .tag {
+  h1, h2, h3, h4, a { color: $dark; }
 }
 
 .header {
-  margin: 2em 0 1em;
+  margin: 2rem 0 1rem;
 }
 
 .inline {
@@ -161,6 +146,10 @@ li { margin: 0; }
     display: block;
     vertical-align: center;
   }
+}
+
+#sidebar {
+  h1 { font-size: $heading-2-size; }
 }
 
 .twitter-share-button {

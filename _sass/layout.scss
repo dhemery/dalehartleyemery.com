@@ -12,7 +12,7 @@ body {
   margin: 0 auto;
 }
 
-#main {
+main {
   float: left;
   width: $main-width-percent - 2 * $padding-percent;
   margin: 0 $padding-percent;
@@ -24,8 +24,4 @@ body {
   margin: 0 $padding-percent 0 0;
 }
 
-#footer { clear: both; }
-
-#sidebar section + section {
-  margin-top: 2rem;
-}
+footer { clear: both; }

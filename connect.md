@@ -21,21 +21,12 @@ links:
 -
   name: Amazon
   url: https://amazon.com/author/dalehartleyemery
-
 ---
-<section>
-  <ul>
-    {% for link in page.links %}
-      <li><a href='{{ link.url }}'>{{ link.name }}</a></li>
-    {% endfor %}
-  </ul>
-</section>
-<section>
-  <h1>Publisher</h1>
-  <p>
-    <a href='http://DriscollBrookPress.com'>Driscoll Brook Press</a>
-    <br />
-    PO Box 161924<br />
-    Sacramento CA 95816 USA
-  </p>
-</section>
+{% for link in page.links %}
+- [{{ link.name }}]({{ link.url }}){% endfor %}
+
+## Publisher
+
+[Driscoll Brook Press](http://DriscollBrookPress.com)  
+PO Box 161924  
+Sacramento CA 95816 USA

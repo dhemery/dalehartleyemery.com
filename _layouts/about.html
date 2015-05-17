@@ -1,14 +1,12 @@
 ---
 layout: page
 ---
-<article class='about'>
-  <header class='boxed header'>
-    <h1 class='title'>
-      <a href='{{ page.url }}'>
-        {{ page.title }}
-      </a>
-    </h1>
-  </header>
+<main class='about'>
+  <h1 class='boxed header title'>
+    <a href='{{ page.url }}'>
+      {{ page.title }}
+    </a>
+  </h1>
   {% include page/share.html %}
   {{ content }}
-</article>
+</main>
