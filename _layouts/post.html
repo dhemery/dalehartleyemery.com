@@ -1,6 +1,7 @@
 ---
 layout: page
 ---
-{% include post/header.html post=page %}
-{% include post/body.html body=content %}
-{% include post/comments.html post=page %}
+{% assign post=page %}
+{% include post/header.html %}
+{% include post/body.html %}
+{% include post/comments.html %}

@@ -5,7 +5,7 @@ permalink: /
 ---
 {% for post in site.posts limit:10 %}
   <article class='post'>
-    {% include post/header.html post=post %}
-    {% include post/body.html body=post.content %}
+    {% include post/header.html %}
+    {% include post/body.html %}
   </article>
 {% endfor %}

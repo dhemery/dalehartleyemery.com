@@ -1,5 +1,5 @@
 ---
-title: Tailor's Tears (Kindle edition)
+title: Tailor’s Tears (Kindle edition)
 tags:
 - Fantasy
 - Contemporary
