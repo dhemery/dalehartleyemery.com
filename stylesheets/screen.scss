@@ -152,8 +152,6 @@ li { margin: 0; }
 
 .navlinks li + li::before { content: ' | '; }
 
-.post .body p:first-child { font-size: 1.2em; }
-
 .post + .post { margin-top: 4em; }
 
 .tags li + li::before { content: ', '; }
