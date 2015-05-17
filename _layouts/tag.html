@@ -6,7 +6,7 @@ layout: page
     {{ page.title }}
   </a>
 </h1>
-{% include page/share.html %}
+{% include page/share.html item=page %}
 {% assign posts = page.posts | sort: 'date' %}
 <dl>
 {% for post in posts reversed %}
