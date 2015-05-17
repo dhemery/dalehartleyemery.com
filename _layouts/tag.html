@@ -8,6 +8,7 @@ layout: page
     </a>
   </h1>
 </header>
+{% include page/share.html %}
 {% assign posts = page.posts | sort: 'date' %}
 <dl>
 {% for post in posts reversed %}
@@ -15,4 +16,3 @@ layout: page
 <dd><time>{{ post.date | date: '%B %-d, %Y' }}</time></dd>
 {% endfor %}
 </dl>
-{% include post/disqus.html %}
