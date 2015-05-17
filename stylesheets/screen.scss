@@ -7,10 +7,11 @@ $inter-paragraph-space: $leading * 1rem;
 
 $text-font: Arial, Helvetica, sans-serif;
 $text-size: 100%;
-$banner-title-size: 3em;
-$title-size: 2em;
-$heading-1-size: 1.5em;
-$heading-2-size: 1.17em;
+$banner-title-size: 3rem;
+$title-size: 2rem;
+$heading-1-size: 1.5rem;
+$heading-2-size: 1.17rem;
+$share-link-size: .75rem;
 
 $site-hue: 180;
 $dark: hsl($site-hue, 100%, 20%);
@@ -98,7 +99,7 @@ main, #sidebar {
 
 .book-links {
   overflow: hidden;
-  a {
+  li {
     width: 48%;
     margin-bottom: .5em;
     &:nth-child(odd) { float: left; }
@@ -150,14 +151,11 @@ main, #sidebar {
 .share {
   float: right;
   margin: 0 0 1em 1em;
-  & > div, & > a {
-    display: block;
-    vertical-align: center;
+  ul {
+    margin: 0;
+    list-style: none;
+    font-size: $share-link-size;
   }
-}
-
-.twitter-share-button {
-  padding-top: 8px;
 }
 
 .tags li + li::before { content: ', '; }

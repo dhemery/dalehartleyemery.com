@@ -1,17 +1,21 @@
 <aside id='sidebar' role='navigation'>
   <section>
     <h1 class='boxed header title'>{{ site.data.domain.title }}</h1>
-    <ul>
+    <ul class='hanging'>
       {% for link in site.data.navigation %}<li><a href='{{ link.url }}'>{{ link.title }}</a></li>{% endfor %}
     </ul>
 </section>
-  <section class='book-links'>
+  <section>
     <h1 class='boxed header title'>Recent Books</h1>
-    {% for slug in site.data.books %}
-      <a href='http://DriscollBrookPress.com/title/{{ slug }}/'>
-        <img src='http://DriscollBrookPress.com/images/{{ slug }}-cover-web.jpg' />
-      </a>
-    {% endfor%}
+    <ul class='book-links'>
+      {% for slug in site.data.books %}
+        <li>
+          <a href='http://DriscollBrookPress.com/title/{{ slug }}/'>
+            <img src='http://DriscollBrookPress.com/images/{{ slug }}-cover-web.jpg' />
+          </a>
+        </li>
+      {% endfor%}
+    </ul>
   </section>
   <section>
     <h1 class='boxed header title'>Recent Posts</h1>

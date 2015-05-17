@@ -1,13 +1,13 @@
 <header class='boxed header'>
-  <h1 class='title'><a href='{{ post.url }}' class='site-link'>{{ post.title }}</a></h1>
-  <time datetime='{{ post.date }}'>
-    {{ post.date | date: '%B %-d, %Y' }}
+  <h1 class='title'><a href='{{ include.post.url }}' class='site-link'>{{ include.post.title }}</a></h1>
+  <time datetime='{{ include.post.date }}'>
+    {{ include.post.date | date: '%B %-d, %Y' }}
   </time>
   |
-  <a href='{{ post.url }}#disqus_thread'></a>
+  <a href='{{ include.post.url }}#disqus_thread'></a>
   |
   Tags:
   <ul class='inline tags'>
-    {% for tag in post.tags %}<li><a href='/tag/{{ tag | slugify }}/' rel='tag'>{{ tag }}</a></li>{% endfor %}
+    {% for tag in include.post.tags %}<li><a href='/tag/{{ tag | slugify }}/' rel='tag'>{{ tag }}</a></li>{% endfor %}
   </ul>
 </header>
