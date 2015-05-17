@@ -12,16 +12,6 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, p, blockquote, figure, ol, ul {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 #main {
   float: left;
   width: $main-width-percent - 2 * $padding-percent;
