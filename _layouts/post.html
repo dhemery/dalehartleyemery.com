@@ -1,8 +1,6 @@
 ---
 layout: page
 ---
-<main class='post'>
-  {% include post/header.html post=page %}
-  {% include post/body.html body=content %}
-  {% include post/comments.html post=page %}
-</main>
+{% include post/header.html post=page %}
+{% include post/body.html body=content %}
+{% include post/comments.html post=page %}

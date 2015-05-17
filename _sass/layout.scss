@@ -25,3 +25,5 @@ main {
 }
 
 footer { clear: both; }
+
+article + article { margin-top: 4rem; }

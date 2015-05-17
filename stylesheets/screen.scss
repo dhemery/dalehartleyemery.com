@@ -3,7 +3,8 @@
 @import 'layout';
 
 $leading: 1.5;
-$header-leading: 1.1;
+$inter-paragraph-space: $leading * 1rem;
+
 $text-font: Arial, Helvetica, sans-serif;
 $text-size: 100%;
 $banner-title-size: 3em;
@@ -25,8 +26,12 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p, li {
+  line-height: $leading;
+}
+
 p, ul, ol, blockquote {
-  margin: 1em auto;
+  margin: $inter-paragraph-space auto;
   padding: 0;
 }
 
@@ -45,7 +50,6 @@ blockquote {
 
 body {
   background-color: $lightest;
-  line-height: $leading;
   font-family: $text-font;
   font-size: $text-size;
 }
@@ -56,7 +60,6 @@ em em { font-style: normal; }
 h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
-  line-height: $header-leading;
 }
 
 h1 { font-size: $heading-1-size; }
@@ -77,7 +80,15 @@ main {
   ul { list-style-type: disc; }
 }
 
-.banner {
+main, #sidebar {
+  h1, h2, h3, h4, a { color: $dark; }
+}
+
+#sidebar {
+  h1 { font-size: $heading-2-size; }
+}
+
+#banner {
   background-color: $dark;
   padding: .5em;
   font-size: $banner-title-size;
@@ -107,7 +118,10 @@ main {
   padding: .5em 1em;
 }
 
-.bullets { list-style: disc; }
+.hanging {
+  margin-left: 1em;
+  text-indent: -1em;
+}
 
 .centered { text-align: center; }
 
@@ -116,10 +130,6 @@ main {
   border-bottom-style: solid;
   font-weight: bold;
   color: $dark;
-}
-
-.about, .post, #sidebar, .tag {
-  h1, h2, h3, h4, a { color: $dark; }
 }
 
 .header {
@@ -137,8 +147,6 @@ main {
 
 .navlinks li + li::before { content: ' | '; }
 
-.post + .post { margin-top: 4em; }
-
 .share {
   float: right;
   margin: 0 0 1em 1em;
@@ -146,10 +154,6 @@ main {
     display: block;
     vertical-align: center;
   }
-}
-
-#sidebar {
-  h1 { font-size: $heading-2-size; }
 }
 
 .twitter-share-button {
