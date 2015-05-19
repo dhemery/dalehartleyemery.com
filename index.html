@@ -1,0 +1,13 @@
+---
+title: Dale Hartley Emery
+layout: page
+permalink: /
+---
+{% for post in site.posts limit:10 %}
+  <article class='post'>
+    {% include post/header.html post=post %}
+    {% assign body = post.content %}
+    {% include post/body.html post=post body=body %}
+  </article>
+{% endfor %}
+{% include scripts/disqus.html %}
