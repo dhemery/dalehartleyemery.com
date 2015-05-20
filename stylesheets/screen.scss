@@ -11,7 +11,7 @@ $banner-title-size: 3rem;
 $title-size: 2rem;
 $heading-1-size: 1.5rem;
 $heading-2-size: 1.17rem;
-$share-link-size: .75rem;
+$detail-text-size: .75rem;
 
 $site-hue: 180;
 $dark: hsl($site-hue, 100%, 20%);
@@ -85,11 +85,7 @@ main, #sidebar {
   h1, h2, h3, h4, a { color: $dark; }
 }
 
-#sidebar {
-  h1 { font-size: $heading-2-size; }
-}
-
-#banner {
+.banner {
   background-color: $dark;
   padding: .5em;
   font-size: $banner-title-size;
@@ -133,7 +129,7 @@ main, #sidebar {
   color: $dark;
 }
 
-.header {
+.heading {
   margin: 2rem 0 1rem;
 }
 
@@ -148,13 +144,17 @@ main, #sidebar {
 
 .navlinks li + li::before { content: ' | '; }
 
+.post-details {
+  font-size: $detail-text-size;
+}
+
 .share {
   float: right;
   margin: 0 0 1em 1em;
   ul {
     margin: 0;
     list-style: none;
-    font-size: $share-link-size;
+    font-size: $detail-text-size;
   }
 }
 

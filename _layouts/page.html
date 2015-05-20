@@ -7,20 +7,17 @@
     <meta viewport='width=device-width' />
     <meta viewport='initial-scale=1' />
     <meta viewport='user-scalable=yes' />
-    <title>{{ page.title }}</title>
+    <title>{{ site.data.domain.title }} | {{ page.title }}</title>
     <link href='/favicon.ico' rel='icon' />
     <link href='/stylesheets/screen.css' media='screen,projection' rel='stylesheet' type='text/css' />
     <link href='/atom.xml' rel='alternate' type='application/atom+xml' />
-    <!--[if lt IE 9]>
-        <script src="/scripts/html5shiv-printshiv.js"></script>
-    <![endif]-->
   </head>
-  <body>
+  <body role='document'>
     {% include page/banner.html %}
     {% include page/navbar.html %}
-    <main>
+    <div role='main'>
       {{ content }}
-    </main>
+    </div>
     {% include page/sidebar.html %}
     {% include page/footer.html %}
   </body>
