@@ -1,13 +1,12 @@
 ---
-title: Dale Hartley Emery
+title: Dances With Cursors
 layout: page
 permalink: /
 ---
 {% for post in site.posts limit:10 %}
-  <article class='post'>
+  <div role='article'>
     {% include post/header.html post=post %}
-    {% assign body = post.content %}
-    {% include post/body.html post=post body=body %}
-  </article>
+    {% include post/body.html post=post body=post.content %}
+  </div>
 {% endfor %}
 {% include scripts/disqus.html %}

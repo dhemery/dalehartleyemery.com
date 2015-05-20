@@ -11,7 +11,7 @@ $banner-title-size: 3rem;
 $title-size: 2rem;
 $heading-1-size: 1.5rem;
 $heading-2-size: 1.17rem;
-$share-link-size: .75rem;
+$detail-text-size: .75rem;
 
 $site-hue: 180;
 $dark: hsl($site-hue, 100%, 20%);
@@ -31,15 +31,10 @@ p, li {
   line-height: $leading;
 }
 
-p, ul, ol, blockquote {
-  margin: $inter-paragraph-space auto;
-  padding: 0;
-}
-
 a {
   text-decoration: none;
   &:hover { text-decoration: underline; }
-  color: inherit;
+  color: $dark;
 }
 
 blockquote {
@@ -61,10 +56,12 @@ em em { font-style: normal; }
 h1, h2, h3, h4 {
   margin: 0;
   padding: 0;
+  color: $dark;
 }
 
-h1 { font-size: $heading-1-size; }
-h2 { font-size: $heading-2-size; }
+h1 { font-size: $banner-title-size; }
+h2 { font-size: $heading-1-size; }
+h3 { font-size: $heading-2-size; }
 
 img {
   border: 0;
@@ -72,29 +69,55 @@ img {
   height: auto;
 }
 
+p, ul, ol, blockquote {
+  padding: 0;
+}
+
 ol, ul { list-style: none; }
 li { margin: 0; }
 
+[role='article'] + [role='article'] { margin-top: 4rem; }
 
-main {
-  ol { list-style-type: decimal; }
-  ul { list-style-type: disc; }
-}
-
-main, #sidebar {
-  h1, h2, h3, h4, a { color: $dark; }
-}
-
-#sidebar {
-  h1 { font-size: $heading-2-size; }
-}
-
-#banner {
+[role='banner'] {
   background-color: $dark;
   padding: .5em;
-  font-size: $banner-title-size;
-  font-weight: normal;
-  color: $light;
+  h1, h2 {
+    font-weight: normal;
+    a { color: $light; }
+  }
+}
+
+[role='complementary'] {
+  float: right;
+  margin: 0 0 1em 1em;
+  ul {
+    margin: 0;
+    list-style: none;
+    font-size: $detail-text-size;
+  }
+}
+
+[role='heading'] {
+  margin: $inter-paragraph-space 0;
+}
+
+[role='body'] {
+  p, ul, ol, blockquote {
+    margin: $inter-paragraph-space auto;
+    padding: 0;
+  }
+}
+
+[role='menubar'] li + li::before { content: ' | '; }
+
+[role='navigation'] {
+  color: $dark;
+  [role='heading'] { font-weight: bold; }
+}
+
+.body {
+  ol { list-style-type: decimal; }
+  ul { list-style-type: disc; }
 }
 
 .book-links {
@@ -119,11 +142,6 @@ main, #sidebar {
   padding: .5em 1em;
 }
 
-.hanging {
-  margin-left: 1em;
-  text-indent: -1em;
-}
-
 .centered { text-align: center; }
 
 .chrome {
@@ -133,8 +151,9 @@ main, #sidebar {
   color: $dark;
 }
 
-.header {
-  margin: 2rem 0 1rem;
+.hanging {
+  margin-left: 1em;
+  text-indent: -1em;
 }
 
 .inline {
@@ -146,19 +165,10 @@ main, #sidebar {
   }
 }
 
-.navlinks li + li::before { content: ' | '; }
-
-.share {
-  float: right;
-  margin: 0 0 1em 1em;
-  ul {
-    margin: 0;
-    list-style: none;
-    font-size: $share-link-size;
-  }
+.post-details {
+  font-size: $detail-text-size;
+  li + li::before { content: ', '; }
 }
-
-.tags li + li::before { content: ', '; }
 
 .title {
   font-variant: small-caps;
