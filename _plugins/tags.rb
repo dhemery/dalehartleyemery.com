@@ -21,7 +21,7 @@ module Jekyll
 
     def generate(site)
       posts_by_tag = {}
-      site.posts.each do |post|
+      site.posts.docs.each do |post|
         tags = post.data['tags'] || []
         tags.each do |tag|
           posts_by_tag[tag] ||= []
