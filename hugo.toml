@@ -1,0 +1,13 @@
+baseURL = 'https://dalehartleyemery.com/'
+languageCode = 'en-us'
+title = 'Dale Hartley Emery'
+copyright = '© 2013–2023 Dale Hartley Emery'
+
+[permalinks]
+posts = '/:year/:month/:filename/'
+
+[taxonomies]
+tag = 'tags'
+
+[markup.goldmark.renderer]
+unsafe = true

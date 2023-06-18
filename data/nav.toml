@@ -1,0 +1,23 @@
+[[link]]
+title = 'Home'
+url = '/'
+
+[[link]]
+title = 'Posts'
+url = '/posts/'
+
+[[link]]
+title = 'Tags'
+url = '/tags/'
+
+[[link]]
+title = 'About'
+url = '/about/'
+
+[[link]]
+title = 'Connect'
+url = '/connect/'
+
+[[link]]
+title = 'Books'
+url = 'https://driscollbrookpress.com/books/'
