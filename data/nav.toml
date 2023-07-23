@@ -1,22 +1,14 @@
 [[link]]
-title = 'Home'
+title = 'Dale'
 url = '/'
 
 [[link]]
-title = 'Posts'
+title = 'Blog'
 url = '/posts/'
 
 [[link]]
 title = 'Tags'
 url = '/tags/'
-
-[[link]]
-title = 'About'
-url = '/about/'
-
-[[link]]
-title = 'Connect'
-url = '/connect/'
 
 [[link]]
 title = 'Books'

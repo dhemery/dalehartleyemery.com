@@ -3,8 +3,7 @@ languageCode = 'en-us'
 title = 'Dale Hartley Emery'
 copyright = '© 2013–2023 Dale Hartley Emery'
 
-[permalinks]
-posts = '/:year/:month/:filename/'
+theme = 'Dale'
 
 [taxonomies]
 tag = 'tags'
